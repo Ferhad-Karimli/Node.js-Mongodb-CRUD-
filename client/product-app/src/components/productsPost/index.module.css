@@ -1,0 +1,10 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textInput {
+  width: 300px !important;
+  margin-top: 20px !important;
+}

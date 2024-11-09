@@ -9,7 +9,11 @@ const authdb = {
 const connectDb = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://${authdb.username}:${authdb.password}@productcluster.jgvb8.mongodb.net/?retryWrites=true&w=majority&appName=${authdb.cluster}`
+      `mongodb+srv://${authdb.username}:${authdb.password}@productcluster.jgvb8.mongodb.net/?retryWrites=true&w=majority&appName=${authdb.cluster}`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
     );
     console.log("mongodb connect is succesfully");
   } catch (error) {
