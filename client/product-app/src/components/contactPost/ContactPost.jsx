@@ -69,21 +69,6 @@ export default function ContactPost() {
   };
   return (
     <div>
-      <ul>
-        <NavLink to="/products">
-          {" "}
-          <li>Products</li>
-        </NavLink>
-        <NavLink to="/">
-          <li>Add Product</li>
-        </NavLink>
-        <NavLink to="/contact-forum">
-          <li>Add Contact</li>
-        </NavLink>
-        <NavLink to="/contact-list">
-          <li>Contacts</li>
-        </NavLink>
-      </ul>
       <form
         onSubmit={form.onSubmit(handleSubmit)}
         className={style.formContainer}

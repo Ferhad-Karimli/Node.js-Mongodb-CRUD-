@@ -12,32 +12,14 @@ export default function ProductList() {
     );
   }, []);
 
-  console.log(products, "products");
   return (
     <div>
-      <ul>
-        <NavLink to="/products">
-          {" "}
-          <li>Products</li>
-        </NavLink>
-        <NavLink to="/">
-          <li>Add Product</li>
-        </NavLink>
-        <NavLink to="/contact-forum">
-          <li>Add Contact</li>
-        </NavLink>
-        <NavLink to="/contact-list">
-          <li>Contacts</li>
-        </NavLink>
-      </ul>
-      <h1>Products</h1>
+      <h1 style={{ textAlign: "center" }}>Products List</h1>
       <div className={style.container}>
         {products.map((item) => (
           <div>
-            <img
-              src={`data:image/jpeg;base64,${item.image}`}
-              alt="item Image"
-            />
+            <img src={item.image} alt="item Image" className={style.img} />
+            {console.log(item.image)}
             <p>Title:{item.title}</p>
 
             <div>Description:{item.description}</div>
